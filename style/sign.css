@@ -1,0 +1,12 @@
+.s-btn{
+	background-color: #82de5f;
+	display: inline-block;
+	padding: 2px;
+	color: #FFF;
+}
+.s-btn:active{
+	background-color: #828282;
+}
+.s-btn:hover{
+	background-color: darkgreen;
+}

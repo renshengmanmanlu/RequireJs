@@ -5,15 +5,25 @@ require.config({
 	paths: {
 		'text':'lib/text',
 		'zepot':'lib/Zepot',
-		'signup':'modular/sign.up',
-		'sign':'modular/sign',
+		'touch':'lib/touch',
+		'fastclick':'lib/fastclick',
+		'layer':'lib/layer.m/layer.m',
+		'layerC':'lib/layer.m/need/layer.css',
+		'signUpJ':'modular/sign.up',
+		'signUpH':'../view/sign.up.html',
+		'signUpC':'../style/sign.up.css',
 		'success':'modular/success',
-		'signupH':'text!view/signup.html',
-		'signH':'text!view/sign.html',
-		'successH':'text!view/success.html',
+		'signJ':'modular/sign',
+		'signH':'../view/sign.html',
+		'signC':'../style/sign.css',
+	},
+	shim: {
+		touch :{
+			deps:['zepot']
+		}
 	}
 });
 
-require(['text','zepot'], function(util) {
+require(['text','zepot','touch','fastclick','signUpJ'], function(text,$) {
 
 });
