@@ -1,12 +1,14 @@
 'use strict';
 
-require(['text!signH', 'text!signC', 'layer', 'text!layerC',], function (signH, signC, layer, layerC) {
-	 return {
+define(['text!signH', 'text!signC','successJ'], function (signH, signC,successJ) {
+	 return{
 		init: function () {
 			var _this = this;
 			$(".style").html(signC);
 			$("#entrance").html(signH);
-			$(".layer").html(layerC);
+
+			$("#name").val(localStorage.getItem("name"));
+			$("#pasword").val(localStorage.getItem("pasword"));
 
 			$(".s-btn").on("click",function(){
 				_this.judge();
@@ -33,7 +35,7 @@ require(['text!signH', 'text!signC', 'layer', 'text!layerC',], function (signH, 
 		},
 		//注册
 		register: function () {
-
+			successJ.inin();
 		}
 	}
 });

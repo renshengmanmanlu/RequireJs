@@ -12,7 +12,9 @@ require.config({
 		'signUpJ':'modular/sign.up',
 		'signUpH':'../view/sign.up.html',
 		'signUpC':'../style/sign.up.css',
-		'success':'modular/success',
+		'successJ':'modular/success',
+		'successH':'../view/success.html',
+		'successC':'../style/success.css',
 		'signJ':'modular/sign',
 		'signH':'../view/sign.html',
 		'signC':'../style/sign.css',
@@ -20,10 +22,17 @@ require.config({
 	shim: {
 		touch :{
 			deps:['zepot']
+		},
+		fastclick :{
+			deps:['zepot']
+		},
+		signUpJ :{
+			deps:['zepot']
 		}
 	}
 });
 
-require(['text','zepot','touch','fastclick','signUpJ'], function(text,$) {
-
+require(['text','zepot','touch','fastclick','layer','text!layerC','signUpJ'], function(text,zepot,touch,fastclick,layer,layerC,signUpJ) {
+		$(".layer").html(layerC);
+		signUpJ.init();
 });
